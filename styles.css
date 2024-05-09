@@ -1,0 +1,37 @@
+h1 {
+  text-align: center
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  font-weight: bold;
+  background-color:#015958;
+  margin: 16px;
+  color:#fff; 
+  border:none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor:pointer;
+
+}
+
+button:hover {
+  background-color:#023535;
+}
+
+  label{
+    font-weight: bold;
+    margin-top: 16px;
+  }
+
+  input{
+    padding: 8px;
+    border-radius: 4px; 
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    height:40px;
+    font-weight: bold;
+  }
