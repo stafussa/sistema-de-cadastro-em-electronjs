@@ -14,7 +14,7 @@
     <body>
     <h1>Sistema de cadastro</h1>
 
-    <form>
+    <form onsubmit="lidarComFormulario()">
       <label for="nome">Nome completo</label>
       <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
   
@@ -33,29 +33,83 @@
       <button type="submit">Enviar formulário</button>
     </form>
 
+    <script>
+      function lidarComFormulario() {
+        
+        var nome = document.getElementById('nome').value;
+        var cpf = document.getElementById('cpf').value;
+        var data_nascimento = document.getElementById('data_nascimento').value;
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value; 
+        
+        console.log(nome);
+        console.log(cpf);
+        console.log(data_nascimento);
+        console.log(email);
+        console.log(senha);
+        
+        alert('Formulário enviado com sucesso!');
+        
+      }
+
+      function lidarComFormulario() {
+        
+        var nome = document.getElementById('nome').value;
+
+        if(nome == ''){
+          alert('Preencha o campo nome');
+          return;
+        }
+
+     
+        var cpf = document.getElementById('cpf').value;
+      
+        if(cpf == ''){
+          alert('Preencha o campo cpf');
+          return;
+        }
+
+     
+
+        var data_nascimento = document.getElementById('data_nascimento').value;
+        
+        if(data_nascimento == ''){
+          alert('Preencha o campo data de nascimento');
+          return;
+        }
+
+      
+
+        var email = document.getElementById('email').value;
+        
+        if(email == ''){
+          alert('Preencha o campo email');
+          return;
+        } 
+
+        
+
+        var senha = document.getElementById('senha').value;
+      
+        if(senha == ''){
+          alert('Preencha o campo senha');
+          return;
+        }
+        
+        var senha = document.getElementById('senha').value;
+       
+        if(senha.length < 8){
+          alert('senha no minimo 8 digitos');
+          return;
+        } 
+        alert('Formulário enviado com sucesso!');
+        }
+
+      
+      
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- 
-    <form action="cadastro.php" method="post">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required>
-      <br>
-      <button type="submit">Cadastrar</button> -->
+    </script>
   </body>
 </html>
