@@ -13,7 +13,7 @@
     </head>
     <body>
     <h1>Sistema de cadastro</h1>
-
+      <img src="imagens/image.png" alt="imagem de um cadastro"/>
     <form onsubmit="lidarComFormulario()">
       <label for="nome">Nome completo</label>
       <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
@@ -86,9 +86,7 @@
           alert('Preencha o campo email');
           return;
         } 
-
-        
-
+  
         var senha = document.getElementById('senha').value;
       
         if(senha == ''){
@@ -104,6 +102,8 @@
         } 
         alert('Formulário enviado com sucesso!');
         }
+        
+
 
       
       
